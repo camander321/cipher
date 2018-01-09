@@ -23,6 +23,21 @@ var cipher = function(input) {
   return reverse(output);
 }
 
-var input = prompt("Enter Something!");
-console.log(input);
-console.log(cipher(input));
+var getInput = function() {
+  return prompt("Enter Something!");
+}
+
+var text = getInput();
+
+
+
+$("#img1").click(function() {
+  alert(cipher (text));
+  // $(this).innerHTML = getInput();
+  // var total = document.getElementById("img1");
+  // total.innerHTML = getInput();
+});
+
+$("#img2").click(function() {
+  alert(text);
+});
