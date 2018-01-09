@@ -27,17 +27,25 @@ var getInput = function() {
   return prompt("Enter Something!");
 }
 
-var text = getInput();
+var updateText = function (output) {
+  var h1 = document.getElementById("text");
+  h1.innerHTML = output;
+}
 
+// var test = function() {
+//   alert("test");
+// }
+
+var text = getInput();
+updateText(text);
 
 
 $("#img1").click(function() {
-  alert(cipher (text));
+  updateText(cipher (text));
   // $(this).innerHTML = getInput();
-  // var total = document.getElementById("img1");
-  // total.innerHTML = getInput();
+
 });
 
 $("#img2").click(function() {
-  alert(text);
+  updateText(text);
 });
